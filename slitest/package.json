@@ -9,6 +9,11 @@
   "dependencies": {
     "@slidev/cli": "^0.31.3",
     "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/theme-seriph": "*",
+    "slidev-theme-unicorn": "^1.1.0"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.1.5",
+    "@iconify-json/twemoji": "^1.1.4"
   }
 }
