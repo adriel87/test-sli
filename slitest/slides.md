@@ -4,12 +4,12 @@ logoHeader: ''
 website: 'jotateam.dev'
 handle: 'jotateam'
 layout: intro
-introImage: ''
+introImage: './processed.png'
 ---
 
 # DentistApp
 
-Tu solucion a las prisas detales
+Tu solución a las prisas detalles
 <!-- falta imagen del dientito -->
 
 ---
@@ -25,32 +25,27 @@ preload: false
   v-motion
   :initial="{ x: -80 }"
   :enter="{ x: 0 }">
-  Una solucion para que las clinicas puedan gestionar de forma facil y rapida tanto urgencias como citas previas
+  Una solución para que las clínicas puedan gestionar de forma fácil y rápida
   <br/>
-  <br/>
-  <br/>
+  
 
 </div>
 
 </v-click>
 
-## 
-## 
-
 <v-click>
+<br/>
 
-## Formulario sencillo para urgencias <twemoji-face-screaming-in-fear /> 
-
+## <twemoji-ambulance/> Urgencias <twemoji-ambulance/> a través de un formulario sencillo para <twemoji-face-screaming-in-fear /> 
 
 </v-click>
 
 <br/>
-  <br/>
-  <br/>
+
 
 <v-click>
 
-## Una cita previa sin complicaciones <twemoji-smiling-face-with-heart-eyes />
+## <twemoji-calendar/> Citas Previas sin complicaciones <twemoji-smiling-face-with-heart-eyes />
 
 
 </v-click>
@@ -65,7 +60,7 @@ gradientColors: ['#8EC5FC', '#E0C3FC']
 
 <v-click>
 
-pasos para construir la solucion
+Manejo de la Aplicación
 
 <br/>
 <br/>
@@ -75,7 +70,7 @@ pasos para construir la solucion
 
 <v-click>
 
-## En lo profundo del back <twemoji-octopus />
+## Desde el usuario  <twemoji-person-dark-skin-tone-blond-hair />
 <br/>
 <br/>
 
@@ -83,147 +78,117 @@ pasos para construir la solucion
 
 <v-click>
 
-## Trabajando en el esqueleto <twemoji-skull />
+## Como administrador <twemoji-superhero-medium-dark-skin-tone />
 <br/>
 <br/>
+
+</v-click>
+
+
+---
+
+## Solo para clínicas dentales ? <twemoji-thinking-face/>
+
+<br/>
+<br/>
+<v-click>
+
+
+La idea es que se pueda aplicar a cualquier tipo de servicio del ámbito de la salud que cuente con un departamento administrativo
+
+</v-click>
+
+
+
+---
+
+# una APP web y no una móvil
+
+<br/>
+<v-click>
+
+Desarrollo fácil <twemoji-desktop-computer/><twemoji-hot-beverage/>
+
+</v-click>
+<br/>
+
+<v-click>
+
+No necesitamos funciones especiales
+
+</v-click>
+<br/>
+
+<v-click>
+
+No depender de las stores <twemoji-cross-mark-button/>
+
+</v-click>
+
+
+---
+
+# Nuestro MVP
+
+### <twemoji-heart-on-fire/> Urgencias <twemoji-heart-on-fire/>
+<br/>
+
+<v-click>
+
+## y luego
+
+<div>
+<br/>
+Citas previas
+<br/>
+notificaciones push
+<br/>
+modulo que automatice la parte administrativa
+<br/>
+</div>
+
+</v-click>
+---
+
+# J-Team
+
+Somos 4 de los cuales
+2 <twemoji-woman/>
+2 <twemoji-man/>
+
+## Abi <twemoji-lipstick/>
+
+## Laura <twemoji-world-map/>
+
+## Nestor <twemoji-building-construction/>
+
+## yo mismo <twemoji-octopus/>
+
+---
+
+# J-Team
+
+## <twemoji-octopus/> Gracias !!!
+
+<v-click>
+
+pero antes agradecer a quien creyó en nosotros y nos dio esta oportunidad
 
 </v-click>
 
 <v-click>
 
-## Vamos a ponernos guapis  <twemoji-lipstick />
-<br/>
-<br/>
-
-</v-click>
-
-<v-click>
-
-## go to the moon <twemoji-rocket />
-<br/>
-<br/>
+### JOSÉ JUAN RODRÍGUEZ MARTÍN
 
 </v-click>
 
 ---
+layout: image
 
-# El back-tender <twemoji-tropical-drink />
-
-
-¿Por que <logos-javascript /> ?
-
-<!-- principalmente para el aprendizaje , aunque a medida-->
-
-como realizamos el acceso a datos con un ORM en JS
-
-Diseñando modelos <twemoji-scissors />
-
-sirviendo los datos 
-
-
+# the image source
+image: 
 ---
 
-# Express y sequelize
+![](https://c.tenor.com/WBRrKmi7dHEAAAAC/power-rangers-mighty-morphin-power-rangers.gif)
 
-```ts
-const express = require('express');
-const { sequelize } = require('../app/models/index');
-//middlewares
-//rutas
-server.listen(PORT , ()=> {
-  console.log(`\n${'Servidor levantado en puerto'.bold} ${PORT.toString().green.bold}\n`);
-    sequelize.sync({
-    force:true,
-  })
-  .then(()=>{
-    console.log(`\nconectado con ${process.env.TABLE_DATABASE}`);
-  })
-})
-```
-
----
-
-# sequelize
-
-```ts
-const sequelize = new Sequelize(options)
-```
-y como son las opciones
-```ts
-const options = {
-  username: process.env.USERNAME_DATABASE,
-  password: process.env.PASSWORD_DATABASE,
-  database: process.env.TABLE_DATABASE,
-  host: process.env.HOST_DATABASE,
-  dialect: process.env.DIALECT_DATABASE,
-
-  seederStorage:'sequelize',
-  seederStorageTableName:'SequelizeSeeds',
-
-  define:{
-    timestamps: false,
-    underscored: true,
-  }
-}
-```
-
----
-
-# Modelos
-
-podemos crearlos manualmente <twemoji-keyboard />
-
-o bien usando el CLI
-
-```bash
-npx sequelize-cli model:generate --name Teeth --attributes pieces:string
-```
-<br/>
-de cualquier forma tendremos un archivo
-
-que va a representar el objeto y sus relaciones en la base de datos
-
----
-
-# Los pollitos del front <twemoji-hatching-chick />
-
-Como enviar los datos <twemoji-open-mailbox-with-raised-flag />
-
-```ts
-//utilizamos el modelo
-const { patient } =require('../models/index');
-const PatientsController={};
-//nos hacemos nuestras funciones CRUD
-PatientsController.get = async(req, res) =>{
-  patient.findAll()
-  .then(patients=> res.status(200).json({
-    ok:true,
-    patients
-  }))
-  .catch(err=>res.status(500).json({
-    ok:false,
-    err
-  }))
-}
-// todo lo que necesites hacer aqui y luego exporta
-module.exports = PatientsController;
-```
----
-
-# ahora solo queda consumir
-y como lo hacemos
-
-## pues construyendo el front <twemoji-building-construction />
-
----
-
-# Nestor  <logos-php />-MAN
-
----
-
-# Laura our <logos-java /> DEV
-
----
-
-# Abigail <logos-css3 /> Comander
 
